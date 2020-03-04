@@ -4,6 +4,13 @@ spring:
       name: microcloud-config-client #定义读取的资源文件名称
       profile: dev #定义profile名称 所谓的开发环境
       label: master #文件分支位置
-      uri: http://localhost:7101 #springcloudCofnig服务地址（项目）
+      #uri: http://localhost:7101 #springcloudCofnig服务地址（项目）
       username: admin #用户名
       password: enjoy #密码
+      discovery:
+        enabled: true  #通过配置中心加载配置文件
+        service-id: MICROCLOUD-CONFIG  #在eureka中注册的服务id
+eureka:
+  client: # 客户端进行Eureka注册的配置才能从Eureka中找到相关服务
+    service-url:
+      defaultZone: http://admin:enjoy@eureka3:7301/eureka
