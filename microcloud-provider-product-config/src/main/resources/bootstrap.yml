@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: microcloud-config-product-client #定义读取的资源文件名称
+      profile: dev #定义profile名称 所谓的开发环境
+      label: master #文件分支位置
+      uri: http://localhost:7101 #springcloudCofnig服务地址（项目）
+      username: admin #用户名
+      password: enjoy #密码
