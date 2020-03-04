@@ -25,6 +25,8 @@
         <module>microcloud-provider-user-hystrix</module>
         <module>microcloud-consumer-turbine</module>
         <module>microcloud-zuul-gateway</module>
+        <module>microcloud-config</module>
+        <module>microcloud-config-client</module>
     </modules>
 
     <properties>
