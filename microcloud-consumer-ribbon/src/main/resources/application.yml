@@ -1,0 +1,10 @@
+server:
+  port: 8001
+
+ribbon:
+  eureka:
+    enabled: false
+#  MICROCLOUD-PROVIDER-PRODUCT 这个字段是随便起的但是引用此名时要保持一致否则负载均衡也不起作用
+MICROCLOUD-PROVIDER-PRODUCT:
+  ribbon:
+    listOfServers: http://localhost:8083,http://localhost:8081,http://localhost:8082

@@ -1,0 +1,18 @@
+server:
+  port: 7002
+eureka:
+  instance: # eureak实例定义
+    hostname: eureka2 # 定义 Eureka 实例所在的主机名称
+  client:
+    fetch-registry: false       #是否要从eureka注册信息获取数据
+    register-with-eureka: false  #判断是否自己要注册到eureka
+    service-url:
+      defaultZone: http://admin:enjoy@eureka1:7001/eureka,http://admin:enjoy@eureka2:7002/eureka
+  server:
+    eviction-interval-timer-in-ms: 1000 #设置清理的间隔时间，单位毫秒
+    enable-self-preservation: false #false 表示关闭保护模式
+spring:
+  security:
+    user:
+      name: admin
+      password: enjoy

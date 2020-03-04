@@ -1,0 +1,14 @@
+server:
+  port: 9101
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    register-with-eureka: false
+    service-url:
+      #defaultZone: http://localhost:7001/eureka  #单个模式 下面的是eureka集群
+      defaultZone: http://admin:enjoy@eureka1:7001/eureka,http://admin:enjoy@eureka2:7002/eureka
+turbine:
+  app-config: MICROCLOUD-PROVIDER-USERS,MICROCLOUD-PROVIDER-PRODUCT
+  cluster-name-expression: new String("default")
