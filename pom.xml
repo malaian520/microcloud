@@ -29,6 +29,9 @@
         <module>microcloud-config-client</module>
         <module>microcloud-config-eureka</module>
         <module>microcloud-provider-product-config</module>
+        <module>microcloud-eureka-config-high</module>
+        <module>microcloud-config2</module>
+        <module>microcloud-config3</module>
     </modules>
 
     <properties>
